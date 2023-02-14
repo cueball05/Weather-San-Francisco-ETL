@@ -60,4 +60,6 @@ The base request is as below:
 
 `https://www.ncei.noaa.gov/access/services/data/v1?` 
 
-After which additional parameters are appended. For a list of supported parameter keys and values see [here](https://github.com/partytax/ncei-api-guide). 
+After which additional parameters are appended. For a list of supported parameter keys and values see [here](https://github.com/partytax/ncei-api-guide).
+
+
