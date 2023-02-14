@@ -51,4 +51,4 @@ with dag:
     run_etl
 ```
 
-The above code defines .... At the end of the code, the task `run_etl` is executed. As there can be multiple tasks in a DAG, it is important to define the tasks dependencies either through 
+The above code defines .... At the end of the code, the task `run_etl` is executed. As there can be multiple tasks in a DAG, it is important to define the tasks dependencies either through .... However, in this code there is only one task defined. 
