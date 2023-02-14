@@ -51,4 +51,13 @@ with dag:
     run_etl
 ```
 
-The above code defines .... At the end of the code, the task `run_etl` is executed. As there can be multiple tasks in a DAG, it is important to define the tasks dependencies either through .... However, in this code there is only one task defined. 
+The above code defines a tasks called `run_etl`. It uses a `PythonOperator` to execute the `ETL` function defined earlier in `airflow_weather_dag.py`. At the end of the code, the task `run_etl` is executed. As there can be multiple tasks in a DAG, it is important to define the tasks dependencies either through bitshift operators `>>` or `<<`, or more explicitly, `set_upstream` or `set_upstream` methods. However, as there is only one task defined in this code, no task dependencies are set. 
+
+### ETL Pipeline Script
+Using the web API requires a token which can be requested [here](https://www.ncdc.noaa.gov/cdo-web/token). Next, a weather station needs to be chosen to collect the data from which can be accessed [here](https://www.ncdc.noaa.gov/cdo-web/datatools/findstation). In this case, the station USW00023234 of San Franciso International Airport, CA US was chosen.
+
+The base request is as below:
+
+`https://www.ncei.noaa.gov/access/services/data/v1?` 
+
+After which additional parameters are appended. For a list of supported parameter keys and values see [here](https://github.com/partytax/ncei-api-guide). 
